@@ -1,7 +1,48 @@
 import React, { Component } from 'react';
 import './App.css';
 import * as math from 'mathjs';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import yervantPic from '%PUBLIC_URL%/pic.jpg';
 
+
+function EntryPoint() {
+    return (
+      <Router>
+          <div>
+              <Link to="/">Home</Link>
+              <Link to="/calculator">Calculator</Link>
+              <Link to="/yervant">Yervant</Link>
+          </div>
+
+          <div>
+              <Route path="/" component={Home}/>
+              <Route path="/calculator" component={Calculator}/>
+              <Route path="/yervant" component={Yervant}/>
+          </div>
+
+
+
+      </Router>
+    );
+}
+
+function Home () {
+    return (
+        <div>
+            <p>Welcome to the home page!</p>
+        </div>
+    );
+}
+
+function Yervant () {
+    return (
+        <div>
+            <h1>Hello Bro!</h1>
+            <br/>
+            <img src={yervantPic}/>
+        </div>
+    );
+}
 
 class Square extends Component {
   constructor(props){
@@ -114,4 +155,4 @@ class Calculator extends Component {
   }
 }
 
-export default Calculator;
+export default EntryPoint;
