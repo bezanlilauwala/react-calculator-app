@@ -37,8 +37,6 @@ function Yervant () {
     return (
         <div>
             <h1>Hello Bro!</h1>
-            <br/>
-            <img src="%PUBLIC_URL%/pic.jpg"/>
         </div>
     );
 }
