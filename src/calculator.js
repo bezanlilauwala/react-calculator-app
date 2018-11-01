@@ -1,27 +1,31 @@
 import React, { Component } from 'react';
-import './App.css';
 import * as math from 'mathjs';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 
 function EntryPoint() {
     return (
-      <Router>
-          <div>
-              <Link to="/">Home</Link>
-              <Link to="/calculator">Calculator</Link>
-              <Link to="/yervant">Yervant</Link>
-          </div>
+        <Router>
+            <div>
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/calculator">Calculator</Link>
+                    </li>
+                    <li>
+                        <Link to="/yervant">Yervant</Link>
+                    </li>
+                </ul>
 
-          <div>
-              <Route path="/" component={Home}/>
-              <Route path="/calculator" component={Calculator}/>
-              <Route path="/yervant" component={Yervant}/>
-          </div>
+                <hr />
 
-
-
-      </Router>
+                <Route exact path="/" component={Home}/>
+                <Route path="/calculator" component={Calculator}/>
+                <Route path="/yervant" component={Yervant}/>
+            </div>
+        </Router>
     );
 }
 
