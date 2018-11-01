@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import * as math from 'mathjs';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import yervantPic from '%PUBLIC_URL%/pic.jpg';
 
 
 function EntryPoint() {
@@ -39,7 +38,7 @@ function Yervant () {
         <div>
             <h1>Hello Bro!</h1>
             <br/>
-            <img src={yervantPic}/>
+            <img src="%PUBLIC_URL%/pic.jpg"/>
         </div>
     );
 }
