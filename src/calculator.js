@@ -41,6 +41,7 @@ function Yervant () {
     return (
         <div>
             <h1>Hello Bro!</h1>
+            <img src="%PUBLIC_URL%/pic.jpg" alt="not a pic"/>
         </div>
     );
 }
